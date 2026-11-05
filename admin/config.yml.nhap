@@ -1,0 +1,55 @@
+# BẢN NHÁP cấu hình trang quản trị (Decap CMS) — CHƯA dùng ngay.
+# Khi kho GitHub được tạo xong, thay 2 chỗ đánh dấu <...> rồi mới đưa vào thư mục admin/ của kho.
+# Các ô nhập liệu dưới đây bám đúng file dữ liệu: data/du-lieu-noi-dung.json
+# (đã trích xuất nguyên văn từ nguồn chuẩn v4 ngày 2026-11-05).
+
+backend:
+  name: github
+  repo: nguyenvansanh62-sudo/ngam-ma-song-dep
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "noi-dung-trang"
+    label: "Nội dung trang Web"
+    files:
+      - name: "du-lieu"
+        label: "Toàn bộ nội dung trang"
+        file: "data/du-lieu-noi-dung.json"
+        fields:
+          - label: "Phần giới thiệu"
+            name: "gioi_thieu"
+            widget: "object"
+            fields:
+              - { label: "Lời chào", name: "loi_chao", widget: "string" }
+              - { label: "Tên", name: "ten", widget: "string" }
+              - { label: "Vai trò", name: "vai_tro", widget: "string" }
+              - { label: "Đoạn giới thiệu", name: "doan_gioi_thieu", widget: "text" }
+              - { label: "Ảnh chân dung", name: "anh_chan_dung", widget: "image" }
+          - label: "Câu chuyện thương hiệu"
+            name: "cau_chuyen"
+            widget: "object"
+            fields:
+              - { label: "Tiêu đề", name: "tieu_de", widget: "string" }
+              - { label: "Mô tả", name: "mo_ta", widget: "text" }
+              - { label: "Mã video YouTube", name: "video_youtube_id", widget: "string" }
+          - label: "Bốn góc nhìn"
+            name: "bon_goc_nhin"
+            widget: "list"
+            fields:
+              - { label: "Số thứ tự", name: "so", widget: "string" }
+              - { label: "Tiêu đề", name: "tieu_de", widget: "string" }
+              - { label: "Mô tả", name: "mo_ta", widget: "text" }
+          - label: "Thông tin liên hệ"
+            name: "lien_he"
+            widget: "object"
+            fields:
+              - { label: "Số điện thoại hiển thị", name: "dien_thoai_hien_thi", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Facebook", name: "facebook", widget: "string" }
+              - { label: "YouTube – Kênh 1", name: "youtube_kenh_1", widget: "string" }
+              - { label: "YouTube – Kênh 2", name: "youtube_kenh_2", widget: "string" }
+              - { label: "TikTok", name: "tiktok", widget: "string" }
+              - { label: "Link Bio", name: "link_bio", widget: "string" }
