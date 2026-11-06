@@ -1,0 +1,26 @@
+name: Xuat ban len Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  xuat-ban:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lay ma nguon tu kho
+        uses: actions/checkout@v4
+      - name: Chuan bi thu muc xuat ban
+        run: |
+          mkdir -p dist
+          cp index.html dist/
+          cp -r assets dist/
+          cp -r admin dist/
+          cp -r data dist/
+      - name: Tai len Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=ngam-ma-song-dep-nguyen-van-sanh --branch=main
