@@ -135,4 +135,191 @@ body:after{content:"";position:fixed;z-index:20;top:12%;left:-28%;width:170px;he
 <section class="wrap process"><div class="process-head"><div><div class="micro">Một cách tiếp cận</div><h2>Từ trải nghiệm<br>đến sẻ chia.</h2></div><p>Không có công thức chung cho một cuộc sống đẹp. Với tôi, đó là hành trình quan sát, chiêm nghiệm và chọn cách sống phù hợp với những giá trị mình tin tưởng.</p></div><div class="steps"><article class="step"><div class="step-num">01</div><h3>Trải nghiệm</h3><p>Đón nhận những câu chuyện và bài học từ đời sống.</p></article><article class="step"><div class="step-num">02</div><h3>Nhìn lại</h3><p>Dành thời gian lắng nghe cảm xúc và suy nghĩ của mình.</p></article><article class="step"><div class="step-num">03</div><h3>Chiêm nghiệm</h3><p>Tìm ra điều có ý nghĩa, thay vì vội vàng kết luận.</p></article><article class="step"><div class="step-num">04</div><h3>Sẻ chia</h3><p>Chia sẻ chân thành để cùng nhau sống tích cực hơn.</p></article></div></section>
 <section class="wrap contact" id="ve-chung-toi"><div><div class="micro" id="lien-he">Kết nối cùng tôi</div><h2>Cùng trò chuyện<br>và sẻ chia.</h2></div><div class="contact-copy">Một lời chào, một câu chuyện hay một góc nhìn khác — tôi luôn trân trọng sự kết nối chân thành.</div><div class="contact-links"><a href="tel:+84912123659">☎　0912 123 659</a><a href="mailto:nguyenvansanh62@gmail.com">✉　nguyenvansanh62@gmail.com</a><a href="https://www.facebook.com/profile.php?id=61568385624543" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.youtube.com/channel/UCr3pRtp6iVMDpiSqtA0StBQ" target="_blank" rel="noopener noreferrer">YouTube – Kênh 1</a><a href="https://www.youtube.com/@S%C3%A1nhNguy%E1%BB%85nV%C4%83n1962" target="_blank" rel="noopener noreferrer">YouTube – Kênh 2</a><a href="https://www.tiktok.com/tiktokstudio" target="_blank" rel="noopener noreferrer">TikTok Studio</a><a href="https://linkbio.co/DNNguyenSanh1962" target="_blank" rel="noopener noreferrer">Link Bio – Nguyễn Sánh</a></div></section>
 </main><footer class="wrap bottom"><div class="brand">Ngẫm mà sống đẹp</div><div>Nguyễn Văn Sánh · Nhân văn · Tích cực · Sống chậm · Chân thật</div><nav class="footer-social" aria-label="Kết nối trên mạng xã hội"><a href="https://www.facebook.com/profile.php?id=61568385624543" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.youtube.com/channel/UCr3pRtp6iVMDpiSqtA0StBQ" target="_blank" rel="noopener noreferrer">YouTube – Kênh 1</a><a href="https://www.youtube.com/@S%C3%A1nhNguy%E1%BB%85nV%C4%83n1962" target="_blank" rel="noopener noreferrer">YouTube – Kênh 2</a><a href="https://www.tiktok.com/tiktokstudio" target="_blank" rel="noopener noreferrer">TikTok Studio</a><a href="https://linkbio.co/DNNguyenSanh1962" target="_blank" rel="noopener noreferrer">Link Bio</a></nav><div>© 2026</div></footer>
+<script>
+/* NVS NOI DU LIEU v1 (2026-11-07): trang doc noi dung tu data/du-lieu-noi-dung.json
+   de sua trong trang quan tri /admin la trang doi theo.
+   Nguyen tac an toan: moi noi dung cung trong HTML van giu nguyen lam mac dinh;
+   neu khong doc duoc du lieu (loi mang, file hong) thi trang hien y nhu ban goc. */
+(function () {
+  function q(s, r) { return (r || document).querySelector(s); }
+  function qa(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function setText(el, txt) { if (el && typeof txt === "string" && txt) el.textContent = txt; }
+  /* Cac tieu de lon cua trang duoc ngat dong co dinh theo thiet ke goc.
+     Bang nay giu dung cho ngat dong ay voi noi dung hien tai; khi nguoi dung
+     doi tieu de thanh cau moi, trang se hien cau moi tren mot dong (hoac tu
+     xuong dong theo chieu rong), khong loi. */
+  var NGAT_DONG = {
+    "Cùng ngẫm về cuộc sống.": ["Cùng ngẫm", "về cuộc sống."],
+    "Từ trải nghiệm đến sẻ chia.": ["Từ trải nghiệm", "đến sẻ chia."],
+    "Cùng trò chuyện và sẻ chia.": ["Cùng trò chuyện", "và sẻ chia."],
+    "Hiểu mình trên đường đi": ["Hiểu mình", "trên đường đi"],
+    "Điều nhỏ có ý nghĩa lớn": ["Điều nhỏ", "có ý nghĩa lớn"],
+    "Sống chậm để hiểu mình": ["Sống chậm", "để hiểu mình"]
+  };
+  function twoLine(el, txt) {
+    if (!el || typeof txt !== "string" || !txt) return;
+    var parts = NGAT_DONG[txt];
+    el.textContent = "";
+    if (parts) {
+      el.appendChild(document.createTextNode(parts[0]));
+      el.appendChild(document.createElement("br"));
+      el.appendChild(document.createTextNode(parts[1]));
+    } else { el.textContent = txt; }
+  }
+  function lines(el, arr) {
+    if (!el || !arr) return;
+    el.textContent = "";
+    arr.forEach(function (t, i) {
+      if (i > 0) el.appendChild(document.createElement("br"));
+      el.appendChild(document.createTextNode(t));
+    });
+  }
+  fetch("data/du-lieu-noi-dung.json", { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("khong doc duoc du lieu"); return r.json(); })
+    .then(function (d) {
+      try {
+        var T = d.trang || {};
+        if (T.tieu_de_tab) document.title = T.tieu_de_tab;
+        var md = q('meta[name="description"]');
+        if (md && T.mo_ta) md.setAttribute("content", T.mo_ta);
+        qa(".top .logo, .bottom .brand").forEach(function (el) { setText(el, T.ten_thuong_hieu); });
+        setText(q(".top .origin"), T.dong_phu_tren_cung);
+
+        var G = d.gioi_thieu || {};
+        setText(q(".hero-copy .micro"), G.loi_chao);
+        setText(q(".hero-copy h1"), G.ten);
+        setText(q(".hero-copy .role"), G.vai_tro);
+        setText(q(".hero-copy p"), G.doan_gioi_thieu);
+        var hp = q("img.hero-photo");
+        if (hp) {
+          if (G.anh_chan_dung) hp.setAttribute("src", G.anh_chan_dung);
+          if (G.chu_thich_anh) hp.setAttribute("alt", G.chu_thich_anh);
+        }
+        if (Array.isArray(G.tu_khoa_ben) && G.tu_khoa_ben.length) {
+          twoLine(q(".hero-side .script"), G.tu_khoa_ben[0]);
+          lines(q(".hero-side .tags"), G.tu_khoa_ben.slice(1));
+        }
+
+        var C = d.cau_chuyen || {};
+        setText(q(".video-intro-heading .micro"), C.nhan_muc);
+        setText(q("#video-title"), C.tieu_de);
+        setText(q(".video-intro-heading p"), C.mo_ta);
+        var emb = C.video_nhung, watch = C.video_xem_tren_youtube;
+        if (C.video_youtube_id) {
+          emb = "https://www.youtube-nocookie.com/embed/" + C.video_youtube_id;
+          watch = "https://www.youtube.com/watch?v=" + C.video_youtube_id;
+        }
+        var fr = q(".video-frame iframe");
+        if (fr && emb) fr.setAttribute("src", emb);
+        var fb = q(".video-fallback a");
+        if (fb && watch) fb.setAttribute("href", watch);
+
+        var H = d.hinh_anh || {};
+        setText(q(".portrait-gallery-heading .micro"), H.nhan_muc);
+        setText(q("#portrait-gallery-title"), H.tieu_de);
+        setText(q(".portrait-gallery-heading p"), H.mo_ta);
+        var grid = q(".portrait-gallery-grid");
+        if (grid && Array.isArray(H.danh_sach)) {
+          grid.textContent = "";
+          H.danh_sach.forEach(function (it, idx) {
+            if (idx > 0) grid.appendChild(document.createTextNode("\n"));
+            var f = document.createElement("figure"); f.className = "portrait-style";
+            var im = document.createElement("img");
+            im.setAttribute("src", it.file || ""); im.setAttribute("alt", it.chu_thich || ""); im.setAttribute("loading", "lazy");
+            var cap = document.createElement("figcaption"); cap.textContent = it.chu_thich || "";
+            f.appendChild(im); f.appendChild(cap); grid.appendChild(f);
+          });
+        }
+
+        var topics = q(".topics");
+        if (topics && Array.isArray(d.bon_goc_nhin)) {
+          topics.textContent = "";
+          d.bon_goc_nhin.forEach(function (it) {
+            var a = document.createElement("article"); a.className = "topic";
+            var n = document.createElement("div"); n.className = "num"; n.textContent = it.so || "";
+            var h = document.createElement("h3"); h.textContent = it.tieu_de || "";
+            var p = document.createElement("p"); p.textContent = it.mo_ta || "";
+            a.appendChild(n); a.appendChild(h); a.appendChild(p); topics.appendChild(a);
+          });
+        }
+
+        var CD = d.chu_de || {};
+        setText(q(".selected .section-title .micro"), CD.nhan_muc);
+        twoLine(q(".selected .section-title h2"), CD.tieu_de);
+        setText(q(".selected .section-title p"), CD.mo_ta);
+        setText(q(".story-intro p"), CD.cau_trich);
+        var sgrid = q(".story-grid");
+        if (sgrid && Array.isArray(CD.danh_sach)) {
+          qa(".story-card", sgrid).forEach(function (el) { el.parentNode.removeChild(el); });
+          CD.danh_sach.forEach(function (it) {
+            var a = document.createElement("article"); a.className = "story-card";
+            var n = document.createElement("div"); n.className = "number"; n.textContent = it.ma || "";
+            var h = document.createElement("h3"); twoLine(h, it.tieu_de || "");
+            var p = document.createElement("p"); p.textContent = it.mo_ta || "";
+            a.appendChild(n); a.appendChild(h); a.appendChild(p); sgrid.appendChild(a);
+          });
+        }
+        var vrow = q(".values-row");
+        if (vrow && Array.isArray(CD.gia_tri)) {
+          vrow.textContent = "";
+          CD.gia_tri.forEach(function (v, i) {
+            var dv = document.createElement("div"); dv.className = "value";
+            var b = document.createElement("b"); b.textContent = ("0" + (i + 1)).slice(-2);
+            var s = document.createElement("span"); s.textContent = v || "";
+            dv.appendChild(b); dv.appendChild(s); vrow.appendChild(dv);
+          });
+        }
+
+        var CT = d.cach_tiep_can || {};
+        setText(q(".process-head .micro"), CT.nhan_muc);
+        twoLine(q(".process-head h2"), CT.tieu_de);
+        setText(q(".process-head p"), CT.mo_ta);
+        var steps = q(".steps");
+        if (steps && Array.isArray(CT.cac_buoc)) {
+          steps.textContent = "";
+          CT.cac_buoc.forEach(function (it) {
+            var a = document.createElement("article"); a.className = "step";
+            var n = document.createElement("div"); n.className = "step-num"; n.textContent = it.so || "";
+            var h = document.createElement("h3"); h.textContent = it.tieu_de || "";
+            var p = document.createElement("p"); p.textContent = it.mo_ta || "";
+            a.appendChild(n); a.appendChild(h); a.appendChild(p); steps.appendChild(a);
+          });
+        }
+
+        var L = d.lien_he || {};
+        setText(q(".contact .micro"), L.nhan_muc);
+        twoLine(q(".contact h2"), L.tieu_de);
+        setText(q(".contact-copy"), L.mo_ta);
+        var socials = [L.facebook, L.youtube_kenh_1, L.youtube_kenh_2, L.tiktok, L.link_bio];
+        function bindSocial(sel, skip) {
+          qa(sel + " a").forEach(function (a, i) {
+            var idx = i - (skip || 0);
+            if (idx >= 0 && idx < socials.length && socials[idx]) a.setAttribute("href", socials[idx]);
+          });
+        }
+        bindSocial(".top-social");
+        bindSocial(".footer-social");
+        bindSocial(".contact-links", 2);
+        var cls = qa(".contact-links a");
+        if (cls[0] && L.dien_thoai_link) {
+          cls[0].setAttribute("href", L.dien_thoai_link);
+          if (L.dien_thoai_hien_thi) cls[0].textContent = "\u260e\u3000" + L.dien_thoai_hien_thi;
+        }
+        if (cls[1] && L.email) {
+          cls[1].setAttribute("href", "mailto:" + L.email);
+          cls[1].textContent = "\u2709\u3000" + L.email;
+        }
+
+        if (typeof d.chan_trang === "string" && d.chan_trang) {
+          var parts = d.chan_trang.split(" \u2014 ");
+          var divs = qa(".bottom > div");
+          if (divs[1] && parts[0]) divs[1].textContent = parts[0];
+          if (divs[2] && parts.length > 1) divs[2].textContent = parts.slice(1).join(" \u2014 ");
+        }
+      } catch (e) { /* bat ky loi nao cung giu nguyen noi dung cung cua trang */ }
+    })
+    .catch(function () { /* khong doc duoc du lieu: trang hien ban goc */ });
+})();
+</script>
+
 </body></html>
