@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://ngam-ma-song-dep-nguyen-van-sanh.pages.dev/sitemap.xml
