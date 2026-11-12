@@ -14,7 +14,9 @@ jobs:
       - name: Chuan bi thu muc xuat ban
         run: |
           mkdir -p dist
-          cp index.html dist/
+          cp *.html dist/
+          cp robots.txt dist/
+          cp sitemap.xml dist/
           cp -r assets dist/
           cp -r admin dist/
           cp -r data dist/
