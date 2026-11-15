@@ -29,6 +29,7 @@ collections:
               - { label: "Tên thương hiệu", name: "ten_thuong_hieu", widget: "string" }
               - { label: "Dòng phụ trên cùng", name: "dong_phu_tren_cung", widget: "string" }
               - { label: "Mô tả trang (cho Google)", name: "mo_ta", widget: "text" }
+              - { label: "Dấu ấn (2 dòng)", name: "dau_an", widget: "text", hint: "Hai dòng chữ trong con dấu tròn, ví dụ dòng 1 NHÂN VĂN, dòng 2 CHÂN THẬT." }
           - label: "Phần giới thiệu"
             name: "gioi_thieu"
             widget: "object"
@@ -53,6 +54,9 @@ collections:
               - { label: "Mã video YouTube", name: "video_youtube_id", widget: "string", hint: "Chỉ là mã cuối đường dẫn video, ví dụ pUMDZKMs1xU. Khi đổi video phải đổi khớp cả 3 ô video." }
               - { label: "Đường dẫn nhúng video", name: "video_nhung", widget: "string" }
               - { label: "Đường dẫn xem trên YouTube", name: "video_xem_tren_youtube", widget: "string" }
+              - { label: "Chữ trên nút chia sẻ", name: "chu_nut", widget: "string" }
+              - { label: "Dòng chữ khi video không phát", name: "chu_du_phong", widget: "string" }
+              - { label: "Chữ link xem trên YouTube", name: "chu_xem_youtube", widget: "string" }
           - label: "Hình ảnh phong cách"
             name: "hinh_anh"
             widget: "object"
@@ -66,6 +70,7 @@ collections:
                 fields:
                   - { label: "Ảnh", name: "file", widget: "image" }
                   - { label: "Chú thích", name: "chu_thich", widget: "string" }
+          - { label: "Tiêu đề mục Bốn góc nhìn (2 dòng)", name: "tieu_de_bon_goc_nhin", widget: "text", hint: "Hai dòng tiêu đề của mục, ví dụ dòng 1 Điều tôi, dòng 2 chia sẻ. Số góc nhìn tự đếm theo danh sách bên dưới." }
           - label: "Bốn góc nhìn"
             name: "bon_goc_nhin"
             widget: "list"
