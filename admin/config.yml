@@ -116,10 +116,13 @@ collections:
               - { label: "Số điện thoại hiển thị", name: "dien_thoai_hien_thi", widget: "string" }
               - { label: "Số điện thoại dạng link", name: "dien_thoai_link", widget: "string", hint: "Dạng tel:+84... — phải khớp số hiển thị." }
               - { label: "Email", name: "email", widget: "string" }
-              - { label: "Facebook", name: "facebook", widget: "string" }
-              - { label: "YouTube – Kênh 1", name: "youtube_kenh_1", widget: "string" }
-              - { label: "YouTube – Kênh 2", name: "youtube_kenh_2", widget: "string" }
-              - { label: "TikTok", name: "tiktok", widget: "string" }
-              - { label: "Link Bio", name: "link_bio", widget: "string" }
+              - label: "Các kênh liên kết"
+                name: "kenh_lien_ket"
+                widget: "list"
+                summary: "{{fields.ten}}"
+                hint: "Bấm Thêm để thêm kênh mới, bấm dấu × để xóa kênh, kéo để đổi thứ tự các kênh."
+                fields:
+                  - { label: "Tên hiển thị", name: "ten", widget: "string" }
+                  - { label: "Đường dẫn", name: "link", widget: "string" }
           - { label: "Dòng chân trang", name: "chan_trang", widget: "string" }
           - { label: "Ghi chú hệ thống (đừng sửa ô này)", name: "ghi_chu", widget: "text" }
