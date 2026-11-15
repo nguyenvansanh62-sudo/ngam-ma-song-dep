@@ -139,11 +139,32 @@
     "dien_thoai_hien_thi": "0912 123 659",
     "dien_thoai_link": "tel:+84912123659",
     "email": "nguyenvansanh62@gmail.com",
-    "facebook": "https://www.facebook.com/profile.php?id=61568385624543",
-    "youtube_kenh_1": "https://www.youtube.com/channel/UCr3pRtp6iVMDpiSqtA0StBQ",
-    "youtube_kenh_2": "https://www.youtube.com/@S%C3%A1nhNguy%E1%BB%85nV%C4%83n1962",
-    "tiktok": "https://www.tiktok.com/@nguyenvansanh16",
-    "link_bio": "https://linkbio.co/DNNguyenSanh1962"
+    "kenh_lien_ket": [
+      {
+        "ten": "Facebook",
+        "link": "https://www.facebook.com/profile.php?id=61568385624543"
+      },
+      {
+        "ten": "YouTube – Kênh 1",
+        "link": "https://www.youtube.com/channel/UCr3pRtp6iVMDpiSqtA0StBQ"
+      },
+      {
+        "ten": "YouTube – Kênh 2",
+        "link": "https://www.youtube.com/@S%C3%A1nhNguy%E1%BB%85nV%C4%83n1962"
+      },
+      {
+        "ten": "YouTube – Kênh 3",
+        "link": "https://www.youtube.com/@NguyenVanSanh1962"
+      },
+      {
+        "ten": "TikTok",
+        "link": "https://www.tiktok.com/@nguyenvansanh16"
+      },
+      {
+        "ten": "Link Bio – Nguyễn Sánh",
+        "link": "https://linkbio.co/DNNguyenSanh1962"
+      }
+    ]
   },
   "chan_trang": "Nguyễn Văn Sánh · Nhân văn · Tích cực · Sống chậm · Chân thật — © 2026",
   "ghi_chu": "Du lieu noi dung trich xuat nguyen van tu nguon chuan v4 (index.html dang chay tren https://ngam-ma-song-dep-nguyen-van-sanh.pages.dev/, nvs-build v4-whole-page-title-motion-shooting-stars-2026-10-22, md5 be2cdc7e5bb2f8db4f7ababbe58beff4). Day la ban do noi dung de thiet ke cac o nhap lieu trong trang quan tri (phuong an A): moi muc o day se thanh mot nhom truong cho nguoi dung sua, khong phai sua truc tiep trong HTML nua."
