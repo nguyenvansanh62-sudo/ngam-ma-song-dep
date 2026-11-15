@@ -3,7 +3,8 @@
     "tieu_de_tab": "Ngẫm mà sống đẹp | Nguyễn Văn Sánh",
     "ten_thuong_hieu": "Ngẫm mà sống đẹp",
     "dong_phu_tren_cung": "Chia sẻ từ trải nghiệm sống",
-    "mo_ta": "Ngẫm mà sống đẹp — chia sẻ trải nghiệm sống, chiêm nghiệm và phát triển bản thân cùng Nguyễn Văn Sánh."
+    "mo_ta": "Ngẫm mà sống đẹp — chia sẻ trải nghiệm sống, chiêm nghiệm và phát triển bản thân cùng Nguyễn Văn Sánh.",
+    "dau_an": "NHÂN VĂN\nCHÂN THẬT"
   },
   "gioi_thieu": {
     "loi_chao": "Xin chào các bạn, tôi là",
@@ -26,7 +27,10 @@
     "mo_ta": "Một vài lời chia sẻ chân thành từ Nguyễn Văn Sánh.",
     "video_youtube_id": "pUMDZKMs1xU",
     "video_nhung": "https://www.youtube-nocookie.com/embed/pUMDZKMs1xU",
-    "video_xem_tren_youtube": "https://www.youtube.com/watch?v=pUMDZKMs1xU"
+    "video_xem_tren_youtube": "https://www.youtube.com/watch?v=pUMDZKMs1xU",
+    "chu_nut": "Gửi lời chia sẻ",
+    "chu_du_phong": "Nếu video không phát ngay trên trang,",
+    "chu_xem_youtube": "bấm vào đây để xem trên YouTube"
   },
   "hinh_anh": {
     "nhan_muc": "Hình ảnh thương hiệu",
@@ -59,6 +63,7 @@
       }
     ]
   },
+  "tieu_de_bon_goc_nhin": "Điều tôi\nchia sẻ",
   "bon_goc_nhin": [
     {
       "so": "01",
