@@ -63,6 +63,26 @@ body:after{content:"";position:fixed;z-index:20;top:12%;left:-28%;width:170px;he
 @media(max-width:760px){.portrait-gallery{padding:40px 0 44px}.portrait-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.portrait-gallery-heading h2{font-size:clamp(30px,7.8vw,38px)}.portrait-style figcaption{font-size:15px;padding:10px}}
 @media(max-width:380px){.portrait-gallery-grid{gap:9px}.portrait-style figcaption{font-size:13px;padding:9px}}
 @media(prefers-reduced-motion:reduce){.portrait-gallery-heading h2,.portrait-style figcaption{animation:none!important}.portrait-style,.portrait-style img{transition:none!important}}
+/* Hanh trinh trai nghiem: nhat ky anh cac chuyen di (them 2026-11-19).
+   Anh hien dung ty le goc (khong cat, khong meo) de khong mat mat nguoi. */
+.hanh-trinh{padding:54px 0 64px}
+.hanh-trinh-heading{margin-bottom:22px}
+.hanh-trinh-heading h2{font:400 clamp(32px,4vw,48px)/1.08 var(--serif);letter-spacing:-.02em;margin:10px 0;background:linear-gradient(100deg,#fff0c2,#e6b65f,#f5d7e6,#bfe8ff,#fff0c2);background-size:280% auto;background-clip:text;-webkit-background-clip:text;color:transparent;animation:nvsTitleWave 7s ease-in-out infinite}
+.hanh-trinh-heading p{color:#cbbab2;font-size:13px;margin:0;max-width:720px}
+.hanh-trinh-chuyen{margin:0 0 22px;font:italic 20px/1.4 var(--serif);color:#e8d5cc}
+.hanh-trinh-chuyen b{font-style:normal;color:#f2d7a1}
+.hanh-trinh-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.hanh-trinh-card{margin:0;overflow:hidden;border:1px solid rgba(215,173,98,.38);border-radius:12px;background:linear-gradient(145deg,rgba(102,32,43,.6),rgba(20,13,15,.96));box-shadow:0 12px 32px rgba(0,0,0,.18);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.hanh-trinh-card:hover{transform:translateY(-5px);border-color:rgba(255,224,157,.8);box-shadow:0 18px 42px rgba(0,0,0,.28)}
+.hanh-trinh-card img{display:block;width:100%;height:auto}
+.hanh-trinh-card figcaption{padding:14px 16px 18px}
+.hanh-trinh-card h3{font:400 21px/1.25 var(--serif);margin:0 0 8px;color:#f2d7a1}
+.hanh-trinh-card p{font-size:13px;line-height:1.65;color:#d8c8c0;margin:0}
+.hanh-trinh-card:last-child{grid-column:2}
+@media(max-width:1050px){.hanh-trinh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hanh-trinh-card:last-child{grid-column:1/-1;max-width:560px;margin-inline:auto}}
+@media(max-width:760px){.hanh-trinh{padding:40px 0 44px}.hanh-trinh-grid{grid-template-columns:minmax(0,1fr);gap:14px}.hanh-trinh-heading h2{font-size:clamp(30px,7.8vw,38px)}.hanh-trinh-chuyen{font-size:18px}.hanh-trinh-card:last-child{grid-column:auto;max-width:none}.hanh-trinh-card h3{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.hanh-trinh-heading h2{animation:none!important}.hanh-trinh-card{transition:none!important}}
+
 
 </style>
 
@@ -127,6 +147,20 @@ body:after{content:"";position:fixed;z-index:20;top:12%;left:-28%;width:170px;he
 <figure class="portrait-style"><img src="assets/chan-dung-phong-cach/chan-dung-thu-vien.jpg" alt="Thư phòng – chiêm nghiệm" loading="lazy"><figcaption>Thư phòng – chiêm nghiệm</figcaption></figure>
 <figure class="portrait-style"><img src="assets/chan-dung-phong-cach/chan-dung-vest-kem.jpg" alt="Vest kem – trang nhã" loading="lazy"><figcaption>Vest kem – trang nhã</figcaption></figure>
 <figure class="portrait-style"><img src="assets/chan-dung-phong-cach/chan-dung-vest-xanh.jpg" alt="Vest xanh – chuyên nghiệp" loading="lazy"><figcaption>Vest xanh – chuyên nghiệp</figcaption></figure>
+  </div>
+</section>
+
+<section class="wrap hanh-trinh" id="hanh-trinh-trai-nghiem" aria-labelledby="hanh-trinh-title">
+  <div class="hanh-trinh-heading"><div class="micro">Nhật ký trải nghiệm</div><h2 id="hanh-trinh-title">Hành trình trải nghiệm</h2><p>Những khoảnh khắc trên đường đi — mỗi chuyến đi là một câu chuyện, mỗi bức ảnh là một điều đáng nhớ.</p></div>
+  <p class="hanh-trinh-chuyen"><b>Hà Nội — 17/11/2026.</b> Một ngày ở Hà Nội: dạo trung tâm thương mại, ăn trưa cùng đoàn trong nhà hàng ấm cúng và chụp ảnh kỷ niệm với hoa và quà.</p>
+  <div class="hanh-trinh-grid">
+<figure class="hanh-trinh-card"><img src="assets/hanh-trinh/hn-17-11-2026/cay-thong-noel.jpg" alt="Nguyễn Văn Sánh đứng một mình trước cây thông Noel phủ tuyết trắng, giơ ngón tay cái cười tươi" loading="lazy"><figcaption><h3>Hà Nội vào đông — đứng bên cây thông đầu mùa</h3><p>Chiều 17/11 ở Hà Nội, cây thông Noel đã lên đèn trước cửa trung tâm thương mại, trắng như vừa có tuyết rơi. Tôi đứng đây, giơ ngón tay cái, thấy lòng mình nhẹ như một đứa trẻ chờ Giáng sinh. Bạn ơi, đông về rồi — chúc bạn một mùa ấm áp, đủ đầy, và luôn có điều gì đó để mong chờ mỗi ngày nhé.</p></figcaption></figure>
+<figure class="hanh-trinh-card"><img src="assets/hanh-trinh/hn-17-11-2026/bua-trua-tap-the.jpg" alt="Cả đoàn mười người chụp ảnh tập thể trong nhà hàng, giữa là bó hoa hồng phấn và túi quà" loading="lazy"><figcaption><h3>Bữa trưa Hà Nội — cả nhà quây quần, hoa và quà đầy tay</h3><p>Bữa trưa ở Hà Nội ngày 17/11, cả đoàn mười người quây quần trong nhà hàng ấm cúng, giữa là bó hoa hồng phấn thật to và túi quà xinh xắn. Ai cũng cười tươi, giơ tay thả tim — niềm vui giản dị mà khó quên. Bạn ạ, đi xa hay đi gần không quan trọng bằng việc có nhau; chúc bạn luôn có những người thương bên cạnh như thế này.</p></figcaption></figure>
+<figure class="hanh-trinh-card"><img src="assets/hanh-trinh/hn-17-11-2026/bua-lau-ha-noi.jpg" alt="Cả nhóm ngồi quanh nồi lẩu nghi ngút khói, ai cũng cười tươi" loading="lazy"><figcaption><h3>Bữa lẩu Hà Nội — ngồi bên nhau là đủ ngon</h3><p>Cả nhóm ngồi quanh nồi lẩu nghi ngút khói, rau xanh và món ăn bày đầy bàn, ai cũng vừa ăn vừa cười. Tôi ngồi giữa, nhìn quanh thấy ai cũng vui là lòng đã no rồi. Bạn ơi, bữa cơm ngon nhất không nằm ở món ăn mà ở những người cùng ngồi — bạn nhớ dành thời gian cho người thương nhé.</p></figcaption></figure>
+<figure class="hanh-trinh-card"><img src="assets/hanh-trinh/hn-17-11-2026/nu-cuoi-ha-noi.jpg" alt="Cả bàn ăn cười rạng rỡ trong nhà hàng đông người, ngoài cửa sổ nắng vàng" loading="lazy"><figcaption><h3>Nụ cười Hà Nội — một bàn, mười nụ cười</h3><p>Chàng trai trẻ giơ máy chụp cả bàn, tôi giơ ngón tay cái, các chị em cười rạng rỡ — một khoảnh khắc tự nhiên không cần sắp đặt. Nhà hàng đông người, ngoài cửa sổ nắng vàng, trong lòng thì ấm áp. Bạn ạ, nụ cười là món quà không tốn tiền mà ai cũng thích nhận — bạn cười nhiều lên nhé.</p></figcaption></figure>
+<figure class="hanh-trinh-card"><img src="assets/hanh-trinh/hn-17-11-2026/dao-pho-ha-noi.jpg" alt="Ba người đứng chụp trước cửa hàng trong trung tâm thương mại, chàng trai trẻ xách túi đồ mới mua" loading="lazy"><figcaption><h3>Dạo phố Hà Nội — ghé cửa hàng, mang về một kỷ niệm</h3><p>Sáng 17/11, cả đoàn dạo trung tâm thương mại ở Hà Nội, ghé vào cửa hàng quần áo rồi chụp chung một tấm với cô nhân viên thân thiện. Chàng trai trẻ xách túi đồ mới, ai cũng vui vẻ. Bạn ơi, mỗi chuyến đi đều có những niềm vui nhỏ như thế — chúc bạn luôn tìm được niềm vui trong những điều giản dị nhất.</p></figcaption></figure>
+<figure class="hanh-trinh-card"><img src="assets/hanh-trinh/hn-17-11-2026/sau-chi-em-bo-hong-do.jpg" alt="Sáu chị em đứng chụp ở sảnh nhà hàng, chị mặc vest đỏ ôm bó hồng đỏ thật lớn" loading="lazy"><figcaption><h3>Sáu chị em và bó hồng đỏ — một ngày đáng nhớ ở Hà Nội</h3><p>Sáu chị em đứng chụp ở sảnh nhà hàng, chị mặc vest đỏ ôm bó hồng đỏ thật lớn, cả nhóm cười rạng rỡ. Bó hoa to đến mức ôm không xuể — tình cảm cũng đầy như thế. Bạn ạ, hoa đẹp nhất khi được trao bằng cả tấm lòng; chúc bạn hôm nay cũng nhận được một điều ngọt ngào như thế.</p></figcaption></figure>
+<figure class="hanh-trinh-card"><img src="assets/hanh-trinh/hn-17-11-2026/bo-hong-do.jpg" alt="Chị mặc bộ vest đỏ ôm bó hồng đỏ, đứng giữa nhà hàng với nụ cười hiền" loading="lazy"><figcaption><h3>Bó hồng đỏ giữa Hà Nội — rực rỡ như chính nụ cười</h3><p>Chị mặc bộ vest đỏ, ôm bó hồng đỏ hơn mấy chục bông, đứng giữa nhà hàng với nụ cười hiền. Hoa đỏ, áo đỏ, sàn caro — cả khung hình rực rỡ mà vẫn ấm áp. Bạn ơi, chúc bạn một ngày tươi như hoa hồng, rạng rỡ như nụ cười này nhé.</p></figcaption></figure>
   </div>
 </section>
 
