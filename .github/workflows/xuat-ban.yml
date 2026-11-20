@@ -17,6 +17,7 @@ jobs:
           cp *.html dist/
           cp robots.txt dist/
           cp sitemap.xml dist/
+          cp favicon.svg dist/
           cp -r assets dist/
           cp -r admin dist/
           cp -r data dist/
