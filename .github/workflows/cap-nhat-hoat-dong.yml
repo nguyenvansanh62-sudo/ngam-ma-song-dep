@@ -1,0 +1,110 @@
+name: Cap nhat hoat dong moi hang gio
+
+# Moi gio lay 6 video moi nhat cua kenh YouTube Ngam ma song dep (qua RSS)
+# va cap nhat data/hoat-dong-moi.json de muc "Hoat dong moi nhat" tren trang
+# luon moi. Chi commit + trien khai khi danh sach video thay doi.
+on:
+  schedule:
+    - cron: '25 * * * *'
+  workflow_dispatch:
+
+jobs:
+  cap-nhat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lay ma nguon tu kho
+        uses: actions/checkout@v4
+
+      - name: Cap nhat danh sach hoat dong moi tu RSS kenh
+        run: |
+          python3 - << 'PYEOF'
+          import json
+          import sys
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timedelta, timezone
+
+          KENH_ID = "UCr3pRtp6iVMDpiSqtA0StBQ"
+          RSS = "https://www.youtube.com/feeds/videos.xml?channel_id=" + KENH_ID
+          DUONG_DAN_JSON = "data/hoat-dong-moi.json"
+          SO_LUONG = 6
+          MUI_GIO_VN = timezone(timedelta(hours=7))
+          NS = {"a": "http://www.w3.org/2005/Atom",
+                "yt": "http://www.youtube.com/xml/schemas/2015"}
+
+          req = urllib.request.Request(RSS, headers={"User-Agent": "Mozilla/5.0"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              data = r.read()
+          goc = ET.fromstring(data)
+          ds_moi = []
+          for muc in goc.findall("a:entry", NS)[:SO_LUONG]:
+              ma = muc.find("yt:videoId", NS).text
+              tieu_de = muc.find("a:title", NS).text
+              cong_bo = muc.find("a:published", NS).text
+              dt = datetime.fromisoformat(cong_bo.replace("Z", "+00:00")).astimezone(MUI_GIO_VN)
+              ds_moi.append({
+                  "tieu_de": tieu_de,
+                  "link": "https://www.youtube.com/watch?v=" + ma,
+                  "video_id": ma,
+                  "ngay": dt.strftime("%d/%m/%Y"),
+                  "gio": dt.strftime("%H:%M"),
+              })
+          if not ds_moi:
+              print("RSS khong co video nao.", file=sys.stderr)
+              sys.exit(1)
+          try:
+              with open(DUONG_DAN_JSON, encoding="utf-8") as f:
+                  cu = json.load(f)
+          except (FileNotFoundError, json.JSONDecodeError):
+              cu = {}
+          ds_cu = cu.get("hoat_dong", [])
+          if [(v["video_id"], v["tieu_de"]) for v in ds_moi] == \
+             [(v["video_id"], v["tieu_de"]) for v in ds_cu]:
+              print("Danh sach video khong doi — khong ghi file.")
+              sys.exit(0)
+          bay_gio = datetime.now(MUI_GIO_VN)
+          du_lieu = {
+              "cap_nhat_luc": bay_gio.strftime("%Y-%m-%dT%H:%M:%S+07:00"),
+              "kenh": "Ngẫm mà sống đẹp",
+              "hoat_dong": ds_moi,
+          }
+          with open(DUONG_DAN_JSON, "w", encoding="utf-8") as f:
+              json.dump(du_lieu, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+          print("Da cap nhat %d video moi nhat." % len(ds_moi))
+          PYEOF
+
+      - name: Luu thay doi vao kho (neu co)
+        id: luu
+        run: |
+          if git diff --quiet -- data/hoat-dong-moi.json; then
+            echo "doi=false" >> "$GITHUB_OUTPUT"
+            echo "Khong co thay doi — khong commit, khong trien khai."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/hoat-dong-moi.json
+            git commit -m "Cap nhat hoat dong moi (tu dong hang gio)"
+            git push
+            echo "doi=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Chuan bi thu muc xuat ban
+        if: steps.luu.outputs.doi == 'true'
+        run: |
+          mkdir -p dist
+          cp *.html dist/
+          cp robots.txt dist/
+          cp sitemap.xml dist/
+          cp favicon.svg dist/
+          cp -r assets dist/
+          cp -r admin dist/
+          cp -r data dist/
+
+      - name: Tai len Cloudflare Pages
+        if: steps.luu.outputs.doi == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=ngam-ma-song-dep-nguyen-van-sanh --branch=main
