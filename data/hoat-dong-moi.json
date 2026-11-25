@@ -1,7 +1,21 @@
 {
-  "cap_nhat_luc": "2026-11-25T20:14:48+07:00",
+  "cap_nhat_luc": "2026-11-26T05:37:39+07:00",
   "kenh": "Ngẫm mà sống đẹp",
   "hoat_dong": [
+    {
+      "tieu_de": "Ngày mới nở hoa | Cánh đồng hoa mẫu đơn",
+      "link": "https://www.youtube.com/watch?v=yD3oLprQpAc",
+      "video_id": "yD3oLprQpAc",
+      "ngay": "26/11/2026",
+      "gio": "05:11"
+    },
+    {
+      "tieu_de": "Bài tập hai cột giúp bạn bắt đầu hành trình tha thứ",
+      "link": "https://www.youtube.com/watch?v=Q4QThghjXP8",
+      "video_id": "Q4QThghjXP8",
+      "ngay": "25/11/2026",
+      "gio": "20:45"
+    },
     {
       "tieu_de": "Lúa chín chiều vàng | Cánh đồng lúa chín ven sông",
       "link": "https://www.youtube.com/watch?v=GaZliSl1ExE",
@@ -29,20 +43,6 @@
       "video_id": "6oDRcMHUsRo",
       "ngay": "24/11/2026",
       "gio": "19:27"
-    },
-    {
-      "tieu_de": "Chiều vui an yên | Bờ hồ hoạt hình hoàng hôn",
-      "link": "https://www.youtube.com/watch?v=dUuCp4jJmcI",
-      "video_id": "dUuCp4jJmcI",
-      "ngay": "24/11/2026",
-      "gio": "15:30"
-    },
-    {
-      "tieu_de": "Sáu chị em và bó hồng đỏ — một ngày đáng nhớ ở Hà Nội",
-      "link": "https://www.youtube.com/watch?v=mBFzRjkAFTg",
-      "video_id": "mBFzRjkAFTg",
-      "ngay": "24/11/2026",
-      "gio": "10:21"
     }
   ]
 }
