@@ -1,7 +1,14 @@
 {
-  "cap_nhat_luc": "2026-11-25T12:40:18+07:00",
+  "cap_nhat_luc": "2026-11-25T20:14:48+07:00",
   "kenh": "Ngẫm mà sống đẹp",
   "hoat_dong": [
+    {
+      "tieu_de": "Lúa chín chiều vàng | Cánh đồng lúa chín ven sông",
+      "link": "https://www.youtube.com/watch?v=GaZliSl1ExE",
+      "video_id": "GaZliSl1ExE",
+      "ngay": "25/11/2026",
+      "gio": "15:30"
+    },
     {
       "tieu_de": "Bó hồng đỏ giữa Hà Nội — rực rỡ như chính nụ cười",
       "link": "https://www.youtube.com/watch?v=fi4Ye61bE64",
@@ -36,13 +43,6 @@
       "video_id": "mBFzRjkAFTg",
       "ngay": "24/11/2026",
       "gio": "10:21"
-    },
-    {
-      "tieu_de": "Ngày mới rạng rỡ | Vườn hoa hoạt hình nắng sớm",
-      "link": "https://www.youtube.com/watch?v=5xgCIb61WkQ",
-      "video_id": "5xgCIb61WkQ",
-      "ngay": "24/11/2026",
-      "gio": "05:12"
     }
   ]
 }
