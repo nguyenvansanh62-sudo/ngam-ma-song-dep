@@ -1,7 +1,14 @@
 {
-  "cap_nhat_luc": "2026-11-26T12:13:46+07:00",
+  "cap_nhat_luc": "2026-11-26T22:29:14+07:00",
   "kenh": "Ngẫm mà sống đẹp",
   "hoat_dong": [
+    {
+      "tieu_de": "Chiều yên bên hồ thiên nga | Hồ thiên nga tranh màu nước",
+      "link": "https://www.youtube.com/watch?v=0P_1G4e2Pgk",
+      "video_id": "0P_1G4e2Pgk",
+      "ngay": "26/11/2026",
+      "gio": "15:30"
+    },
     {
       "tieu_de": "Ngồi ghế đá bên hồ — nghe thông reo, lòng an yên",
       "link": "https://www.youtube.com/watch?v=fwsbSD4C4Z8",
@@ -36,13 +43,6 @@
       "video_id": "GaZliSl1ExE",
       "ngay": "25/11/2026",
       "gio": "15:30"
-    },
-    {
-      "tieu_de": "Bó hồng đỏ giữa Hà Nội — rực rỡ như chính nụ cười",
-      "link": "https://www.youtube.com/watch?v=fi4Ye61bE64",
-      "video_id": "fi4Ye61bE64",
-      "ngay": "25/11/2026",
-      "gio": "10:20"
     }
   ]
 }
