@@ -1,7 +1,21 @@
 {
-  "cap_nhat_luc": "2026-11-26T22:29:14+07:00",
+  "cap_nhat_luc": "2026-11-27T07:41:32+07:00",
   "kenh": "Ngẫm mà sống đẹp",
   "hoat_dong": [
+    {
+      "tieu_de": "Ngày Mới Mát Lành | Đồi Cỏ Xanh Sương Sớm",
+      "link": "https://www.youtube.com/watch?v=eJuRPCzN09k",
+      "video_id": "eJuRPCzN09k",
+      "ngay": "27/11/2026",
+      "gio": "05:17"
+    },
+    {
+      "tieu_de": "Đừng để một lần thất bại quyết định cả tương lai của bạn",
+      "link": "https://www.youtube.com/watch?v=YBvRbU-ijds",
+      "video_id": "YBvRbU-ijds",
+      "ngay": "27/11/2026",
+      "gio": "05:15"
+    },
     {
       "tieu_de": "Chiều yên bên hồ thiên nga | Hồ thiên nga tranh màu nước",
       "link": "https://www.youtube.com/watch?v=0P_1G4e2Pgk",
@@ -29,20 +43,6 @@
       "video_id": "yD3oLprQpAc",
       "ngay": "26/11/2026",
       "gio": "05:11"
-    },
-    {
-      "tieu_de": "Bài tập hai cột giúp bạn bắt đầu hành trình tha thứ",
-      "link": "https://www.youtube.com/watch?v=Q4QThghjXP8",
-      "video_id": "Q4QThghjXP8",
-      "ngay": "25/11/2026",
-      "gio": "20:45"
-    },
-    {
-      "tieu_de": "Lúa chín chiều vàng | Cánh đồng lúa chín ven sông",
-      "link": "https://www.youtube.com/watch?v=GaZliSl1ExE",
-      "video_id": "GaZliSl1ExE",
-      "ngay": "25/11/2026",
-      "gio": "15:30"
     }
   ]
 }
