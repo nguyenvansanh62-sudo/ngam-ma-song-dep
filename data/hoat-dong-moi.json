@@ -1,7 +1,21 @@
 {
-  "cap_nhat_luc": "2026-11-27T07:41:32+07:00",
+  "cap_nhat_luc": "2026-11-27T16:45:41+07:00",
   "kenh": "Ngẫm mà sống đẹp",
   "hoat_dong": [
+    {
+      "tieu_de": "Lau Trắng Chiều Nay | Cỏ Lau Trắng Ven Sông",
+      "link": "https://www.youtube.com/watch?v=-BuHmP8sW8Y",
+      "video_id": "-BuHmP8sW8Y",
+      "ngay": "27/11/2026",
+      "gio": "15:30"
+    },
+    {
+      "tieu_de": "Trời xanh mây trắng — Đà Lạt đẹp đến nao lòng",
+      "link": "https://www.youtube.com/watch?v=qaGDuTwSeTU",
+      "video_id": "qaGDuTwSeTU",
+      "ngay": "27/11/2026",
+      "gio": "10:09"
+    },
     {
       "tieu_de": "Ngày Mới Mát Lành | Đồi Cỏ Xanh Sương Sớm",
       "link": "https://www.youtube.com/watch?v=eJuRPCzN09k",
@@ -29,20 +43,6 @@
       "video_id": "fwsbSD4C4Z8",
       "ngay": "26/11/2026",
       "gio": "10:04"
-    },
-    {
-      "tieu_de": "Mỗi buổi sáng là một cơ hội để tha thứ cho chính mình",
-      "link": "https://www.youtube.com/watch?v=QD4Do8DFInc",
-      "video_id": "QD4Do8DFInc",
-      "ngay": "26/11/2026",
-      "gio": "07:43"
-    },
-    {
-      "tieu_de": "Ngày mới nở hoa | Cánh đồng hoa mẫu đơn",
-      "link": "https://www.youtube.com/watch?v=yD3oLprQpAc",
-      "video_id": "yD3oLprQpAc",
-      "ngay": "26/11/2026",
-      "gio": "05:11"
     }
   ]
 }
