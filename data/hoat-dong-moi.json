@@ -1,7 +1,21 @@
 {
-  "cap_nhat_luc": "2026-11-28T02:31:52+07:00",
+  "cap_nhat_luc": "2026-11-28T09:49:29+07:00",
   "kenh": "Ngẫm mà sống đẹp",
   "hoat_dong": [
+    {
+      "tieu_de": "Tre Xanh Đón Nắng | Rừng Trúc Xanh Buổi Sớm",
+      "link": "https://www.youtube.com/watch?v=VekQn6ge1g0",
+      "video_id": "VekQn6ge1g0",
+      "ngay": "28/11/2026",
+      "gio": "05:18"
+    },
+    {
+      "tieu_de": "Muốn thay đổi lâu dài, đừng chỉ học một mình",
+      "link": "https://www.youtube.com/watch?v=sLvE7fKgK0Y",
+      "video_id": "sLvE7fKgK0Y",
+      "ngay": "28/11/2026",
+      "gio": "05:14"
+    },
     {
       "tieu_de": "Ba bước giúp bạn nhìn lại và tháo gỡ chướng ngại tinh thần",
       "link": "https://www.youtube.com/watch?v=PzovGUC86ys",
@@ -29,20 +43,6 @@
       "video_id": "eJuRPCzN09k",
       "ngay": "27/11/2026",
       "gio": "05:17"
-    },
-    {
-      "tieu_de": "Đừng để một lần thất bại quyết định cả tương lai của bạn",
-      "link": "https://www.youtube.com/watch?v=YBvRbU-ijds",
-      "video_id": "YBvRbU-ijds",
-      "ngay": "27/11/2026",
-      "gio": "05:15"
-    },
-    {
-      "tieu_de": "Chiều yên bên hồ thiên nga | Hồ thiên nga tranh màu nước",
-      "link": "https://www.youtube.com/watch?v=0P_1G4e2Pgk",
-      "video_id": "0P_1G4e2Pgk",
-      "ngay": "26/11/2026",
-      "gio": "15:30"
     }
   ]
 }
