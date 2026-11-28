@@ -1,7 +1,21 @@
 {
-  "cap_nhat_luc": "2026-11-28T09:49:29+07:00",
+  "cap_nhat_luc": "2026-11-28T19:01:55+07:00",
   "kenh": "Ngẫm mà sống đẹp",
   "hoat_dong": [
+    {
+      "tieu_de": "Thông Xanh Chiều Vàng | Rừng Thông Xanh Nắng Chiều",
+      "link": "https://www.youtube.com/watch?v=9o5A5GRbRHw",
+      "video_id": "9o5A5GRbRHw",
+      "ngay": "28/11/2026",
+      "gio": "15:30"
+    },
+    {
+      "tieu_de": "Cùng giơ ngón cái — Đà Lạt, chúng tôi đến rồi!",
+      "link": "https://www.youtube.com/watch?v=ahHPAFIpZ-M",
+      "video_id": "ahHPAFIpZ-M",
+      "ngay": "28/11/2026",
+      "gio": "10:08"
+    },
     {
       "tieu_de": "Tre Xanh Đón Nắng | Rừng Trúc Xanh Buổi Sớm",
       "link": "https://www.youtube.com/watch?v=VekQn6ge1g0",
@@ -29,20 +43,6 @@
       "video_id": "-BuHmP8sW8Y",
       "ngay": "27/11/2026",
       "gio": "15:30"
-    },
-    {
-      "tieu_de": "Trời xanh mây trắng — Đà Lạt đẹp đến nao lòng",
-      "link": "https://www.youtube.com/watch?v=qaGDuTwSeTU",
-      "video_id": "qaGDuTwSeTU",
-      "ngay": "27/11/2026",
-      "gio": "10:09"
-    },
-    {
-      "tieu_de": "Ngày Mới Mát Lành | Đồi Cỏ Xanh Sương Sớm",
-      "link": "https://www.youtube.com/watch?v=eJuRPCzN09k",
-      "video_id": "eJuRPCzN09k",
-      "ngay": "27/11/2026",
-      "gio": "05:17"
     }
   ]
 }
